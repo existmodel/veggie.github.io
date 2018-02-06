@@ -62,6 +62,12 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden; }
 
+/*.error {
+  animation: shake 0.5s;
+}*/
+
+
+
 .page-header__wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -239,9 +245,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;}
 
 .contact__title {
   font-size: 40px;
@@ -291,9 +297,24 @@ body {
   margin: 0;
   font-size: 16px; }
 
+@media (max-width: 1280px) {
+  .contact {
+    padding-right: 100px;
+  }
+}
+
 @media (max-width: 1199px) {
   .contact {
     width: 100%; } }
+
+@media (max-width: 830px) {
+  .contact {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0;
+  }
+}
 
 @media (max-width: 650px) {
   .contact__info {
@@ -431,7 +452,7 @@ body {
 .form__input {
   width: 250px;
   border: none;
-  border-bottom: 1px solid #3c3c3c;
+  border-bottom: 1px solid #000000;
   font-size: 18px;
   font-style: italic;
   margin-bottom: 50px;
@@ -445,19 +466,19 @@ body {
   .form__input:hover {
     border-bottom: 1px solid #227c00; }
   .form__input:focus {
-    border-bottom: 1px solid #89c585; }
+    border-bottom: 1px solid #9b0f1d; }
 
 .form__input::-webkit-input-placeholder {
-  color: #3c3c3c; }
+  color: #000000; }
 
 .form__input:-ms-input-placeholder {
-  color: #3c3c3c; }
+  color: #000000; }
 
 .form__input::-ms-input-placeholder {
-  color: #3c3c3c; }
+  color: #000000; }
 
 .form__input::placeholder {
-  color: #3c3c3c; }
+  color: #000000; }
 
 .form__input--margin {
   margin-right: 50px; }
@@ -465,7 +486,7 @@ body {
 .form__textarea {
   width: 100%;
   border: none;
-  border-bottom: 1px solid #3c3c3c;
+  border-bottom: 1px solid #000000;
   font-size: 18px;
   font-family: "Merriweather", "Times New Roman", serif;
   font-style: italic;
@@ -475,37 +496,41 @@ body {
   .form__textarea:hover {
     border-bottom: 1px solid #227c00; }
   .form__textarea:focus {
-    border-bottom: 1px solid #89c585; }
+    border-bottom: 1px solid #9b0f1d; }
 
 .form__textarea::-webkit-input-placeholder {
-  color: #3c3c3c; }
+  color: #000000; }
 
 .form__textarea:-ms-input-placeholder {
-  color: #3c3c3c; }
+  color: #000000; }
 
 .form__textarea::-ms-input-placeholder {
-  color: #3c3c3c; }
+  color: #000000; }
 
 .form__textarea::placeholder {
-  color: #3c3c3c; }
+  color: #000000; }
 
 .form__button {
-  color: #3c3c3c;
+  color: #000000;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-right: 15px;
   padding-left: 15px;
   font-size: 18px;
   border: none;
-  border: 1px solid #3c3c3c;
+  border: 1px solid #000000;
   margin: auto;
-  background-color: transparent;
   cursor: pointer;
+  background-color: transparent;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
   border-radius: 0; }
   .form__button:hover {
-    border: 1px solid #227c00; }
+    border: 1px solid #227c00;
+    box-shadow: 0 1px 10px 0 #000000;
+     }
   .form__button:active {
-    border: 1px solid #89c585; }
+    border: 1px solid #9b0f1d; }
 
 @media (max-width: 650px) {
   .form {
@@ -734,6 +759,7 @@ body {
 .page-footer {
   height: 100vh;
   padding-top: 100px;
+  color: #000000;
   background-color: #eff0f0;
   background-image: url("../img/footer_bg.jpg");
   background-repeat: no-repeat;
@@ -765,6 +791,12 @@ body {
 @media (max-width: 1199px) {
   .page-footer__down {
     width: 100%; } }
+
+@media (max-width: 830px) {
+  .page-footer {
+      background-position: 62% 0;
+    }
+}
 
 @media (max-width: 650px) {
   .page-footer {
@@ -921,10 +953,12 @@ body {
 .social__link {
   background: transparent url("../img/sprite.png") no-repeat;
   background-position: -110px -108px;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
   width: 11px;
   height: 23px;
   display: block;
-  border: 1px solid #3c3c3c;
+  border: 1px solid #000000;
   padding: 24px; }
   .social__link--instagram {
     background-position: -72px -108px;
@@ -932,7 +966,11 @@ body {
     height: 26px;
     margin-left: 20px; }
   .social__link:hover {
-    border: 1px solid #227c00; }
+    border: 1px solid #227c00;
+    box-shadow: 0 1px 10px 0 #000000;
+  }
+  .social__link:active {
+    border: 1px solid #68000b; }
 
 @media (max-width: 650px) {
   .social {
