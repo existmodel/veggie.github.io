@@ -518,19 +518,16 @@ body {
   padding-left: 15px;
   font-size: 18px;
   border: none;
-  border: 1px solid #000000;
   margin: auto;
   cursor: pointer;
   background-color: transparent;
-  -webkit-transition: all 0.7s;
-  transition: all 0.7s;
   border-radius: 0; }
   .form__button:hover {
-    border: 1px solid #227c00;
-    box-shadow: 0 1px 10px 0 #000000;
+    outline: 1px solid #000000;
+    box-shadow: 0 5px 13px 1px #e5e5e5;
      }
   .form__button:active {
-    border: 1px solid #9b0f1d; }
+    outline: 1px solid #9b0f1d; }
 
 @media (max-width: 650px) {
   .form {
@@ -967,7 +964,7 @@ body {
     margin-left: 20px; }
   .social__link:hover {
     border: 1px solid #227c00;
-    box-shadow: 0 1px 10px 0 #000000;
+    box-shadow: 0 5px 13px 1px #e5e5e5;
   }
   .social__link:active {
     border: 1px solid #68000b; }
